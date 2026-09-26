@@ -2,6 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://d1btb5s2sh6gt" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://b26nlvx5owifw" path="res://wall.tscn" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://cwj7tiwt7gmx4" path="res://label_2.gd" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://cxp8hjm6rxu4l" path="res://std.gd" id="4_ryrav"]
+[ext_resource type="Script" uid="uid://t7kiwppitnci" path="res://area_2d.gd" id="5_eow3j"]
+[ext_resource type="Shape2D" uid="uid://phu34ls1cg5b" path="res://areashape.tres" id="6_j5wjh"]
 
 [node name="Game" type="Node2D" unique_id=2085864810]
 
@@ -19,6 +23,23 @@ offset_top = 26.0
 offset_right = 137.0
 offset_bottom = 76.0
 
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=2098169486]
+offset_left = 437.0
+offset_right = 721.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 40
+text = "WASD to move"
+script = ExtResource("2_feb5d")
+
+[node name="Label3" type="Label" parent="CanvasLayer" unique_id=884076860]
+offset_left = 444.0
+offset_top = -3.0
+offset_right = 726.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 40
+text = "Space to DASH"
+script = ExtResource("4_ryrav")
+
 [node name="Node2D2" parent="." unique_id=924120522 instance=ExtResource("2_e2o6t")]
 position = Vector2(499, 384)
 rotation = 1.5707964
@@ -31,3 +52,21 @@ scale = Vector2(0.48000002, 3.0000012)
 [node name="Node2D4" parent="." unique_id=869965705 instance=ExtResource("2_e2o6t")]
 position = Vector2(271, 159)
 scale = Vector2(0.48, 3)
+
+[node name="Node2D5" parent="." unique_id=1496404585 instance=ExtResource("2_e2o6t")]
+position = Vector2(-105, -13)
+scale = Vector2(5.4799986, 0.4000004)
+
+[node name="Node2D6" parent="." unique_id=2068007453 instance=ExtResource("2_e2o6t")]
+position = Vector2(1106, -12.000001)
+scale = Vector2(5.4799986, 0.4000004)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2045802310]
+position = Vector2(506, -57)
+script = ExtResource("5_eow3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=310885510]
+position = Vector2(0, -3)
+shape = ExtResource("6_j5wjh")
+
+[connection signal="body_entered" from="Area2D" to="CanvasLayer/Label3" method="_on_area_2d_body_entered"]
