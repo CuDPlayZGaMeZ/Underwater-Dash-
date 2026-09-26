@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://dna81nea6ijv7"]
 
-[ext_resource type="Script" uid="uid://benxihk6oenvk" path="res://button.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://d331hhqn3yier" path="res://Untitled23_20260926113242.png" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://11ijbv1twrgd" path="res://Start untouched.svg" id="2_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://dtwj5pcjj3dwo" path="res://Start touched.svg" id="3_kdubu"]
+[ext_resource type="Script" uid="uid://b06806km2llhk" path="res://texture_button.gd" id="4_d21ai"]
 
 [node name="Node2D" type="Node2D" unique_id=1544341329]
 
-[node name="Button" type="Button" parent="." unique_id=302369707]
-offset_left = 25.0
-offset_top = 148.0
-offset_right = 249.0
-offset_bottom = 244.0
-theme_override_font_sizes/font_size = 40
-text = "Start"
-script = ExtResource("1_0e48y")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=86194502]
+position = Vector2(524, 64)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_0hol4")
 
-[node name="Label" type="Label" parent="." unique_id=1601379270]
-offset_left = 277.0
-offset_top = 21.0
-offset_right = 950.0
-offset_bottom = 76.0
-theme_override_font_sizes/font_size = 40
-text = "Underwater Dash + (very early build)"
-
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=159110103]
+offset_left = 106.0
+offset_top = 159.0
+offset_right = 168.0
+offset_bottom = 222.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("2_q6r6c")
+texture_pressed = ExtResource("3_kdubu")
+texture_hover = ExtResource("3_kdubu")
+script = ExtResource("4_d21ai")
