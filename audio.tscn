@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bd0o1b4efxyy3"]
+
+[ext_resource type="AudioStream" uid="uid://byk8gc7upvgon" path="res://Underwater Dash! Full.wav" id="1_qc0l7"]
+
+[node name="Node2D" type="Node2D" unique_id=827479835]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1543192727]
+stream = ExtResource("1_qc0l7")
+volume_db = -10.478
+autoplay = true

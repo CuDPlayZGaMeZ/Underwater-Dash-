@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b26nlvx5owifw"]
+
+[ext_resource type="Shape2D" uid="uid://s1nqnd1ihf2e" path="res://new_rectangleagain_shape_2d.tres" id="1_y4f30"]
+[ext_resource type="Texture2D" uid="uid://scbacqbytrqm" path="res://icon.svg" id="2_iuee5"]
+
+[node name="Node2D" type="Node2D" unique_id=924120522]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1977747004]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1599354525]
+shape = ExtResource("1_y4f30")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=1075325098]
+texture = ExtResource("2_iuee5")

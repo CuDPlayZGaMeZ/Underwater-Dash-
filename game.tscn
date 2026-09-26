@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bw7y7nflblhtl"]
+
+[ext_resource type="PackedScene" uid="uid://d1btb5s2sh6gt" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://b26nlvx5owifw" path="res://wall.tscn" id="2_e2o6t"]
+
+[node name="Game" type="Node2D" unique_id=2085864810]
+
+[node name="Node2D" parent="." unique_id=529594684 instance=ExtResource("1_80nbo")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1347045247]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1290010098]
+offset_right = 461.0
+offset_bottom = 73.0
+text = "game"
+
+[node name="Velocity_Label" type="Label" parent="CanvasLayer" unique_id=1789811550]
+offset_top = 26.0
+offset_right = 137.0
+offset_bottom = 76.0
+
+[node name="Node2D2" parent="." unique_id=924120522 instance=ExtResource("2_e2o6t")]
+position = Vector2(499, 384)
+rotation = 1.5707964
+scale = Vector2(0.68, 3.2400007)
+
+[node name="Node2D3" parent="." unique_id=1296543659 instance=ExtResource("2_e2o6t")]
+position = Vector2(728, 162)
+scale = Vector2(0.48000002, 3.0000012)
+
+[node name="Node2D4" parent="." unique_id=869965705 instance=ExtResource("2_e2o6t")]
+position = Vector2(271, 159)
+scale = Vector2(0.48, 3)
