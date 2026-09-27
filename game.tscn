@@ -139,7 +139,26 @@ position = Vector2(1.5, 1)
 shape = ExtResource("10_mfdv2")
 
 [node name="Node2D18" parent="." unique_id=1055757588 instance=ExtResource("11_mfdv2")]
-position = Vector2(1048, -423)
+position = Vector2(2477, -515)
+
+[node name="Node2D19" parent="." unique_id=702809397 instance=ExtResource("11_mfdv2")]
+position = Vector2(-840, -516)
+
+[node name="Node2D20" parent="." unique_id=885186247 instance=ExtResource("2_e2o6t")]
+position = Vector2(0, -908.00006)
+scale = Vector2(0.48, 2.04)
+
+[node name="Node2D21" parent="." unique_id=1267560293 instance=ExtResource("2_e2o6t")]
+position = Vector2(1000, -908)
+scale = Vector2(0.48, 2.04)
+
+[node name="Node2D22" parent="." unique_id=310908041 instance=ExtResource("2_e2o6t")]
+position = Vector2(166, -1061.0001)
+scale = Vector2(3, 0.48)
+
+[node name="Node2D23" parent="." unique_id=1109800313 instance=ExtResource("2_e2o6t")]
+position = Vector2(836, -1061)
+scale = Vector2(3, 0.48)
 
 [connection signal="body_entered" from="Area2D" to="CanvasLayer/Label3" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="CanvasLayer/Label4" method="_on_area_2d_2_body_entered"]
