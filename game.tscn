@@ -139,10 +139,7 @@ position = Vector2(1.5, 1)
 shape = ExtResource("10_mfdv2")
 
 [node name="Node2D18" parent="." unique_id=1055757588 instance=ExtResource("11_mfdv2")]
-position = Vector2(2477, -515)
-
-[node name="Node2D19" parent="." unique_id=702809397 instance=ExtResource("11_mfdv2")]
-position = Vector2(-840, -516)
+position = Vector2(1042, -1151)
 
 [node name="Node2D20" parent="." unique_id=885186247 instance=ExtResource("2_e2o6t")]
 position = Vector2(0, -908.00006)

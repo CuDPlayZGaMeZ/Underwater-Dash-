@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bierrqoyfa3yc" path="res://costume1.svg" id="2_e6d4v"]
 [ext_resource type="Shape2D" uid="uid://dao344sax634" path="res://bomb.tres" id="2_qp131"]
 [ext_resource type="Shape2D" uid="uid://qlo3a8ydrxoj" path="res://enect.tres" id="3_qp131"]
+[ext_resource type="Script" uid="uid://cfyumhr2xclgs" path="res://ray_cast_2d.gd" id="5_qp131"]
 
 [node name="Node2D" type="Node2D" unique_id=1055757588]
 
@@ -23,6 +24,9 @@ texture = ExtResource("2_e6d4v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=1492743646]
 shape = ExtResource("3_qp131")
+
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D" unique_id=1419300172]
+script = ExtResource("5_qp131")
 
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_exited"]
