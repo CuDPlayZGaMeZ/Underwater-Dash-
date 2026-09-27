@@ -1,8 +1,8 @@
 extends Node
 var score = 0
-@onready var label = get_node("../Canvaslayer/Scorebel")
+@onready var label = get_node("../CanvasLayer/Scorebel")
 
 func scoreup():
 	score += 1
-	label.text = int(score)
+	label.text = str(score)
 	print(score)
