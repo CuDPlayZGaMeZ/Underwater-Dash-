@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://8vswba8b6utm" path="res://coin.tscn" id="3_vef74"]
 [ext_resource type="Script" uid="uid://cxp8hjm6rxu4l" path="res://std.gd" id="4_ryrav"]
 [ext_resource type="Script" uid="uid://t7kiwppitnci" path="res://area_2d.gd" id="5_eow3j"]
+[ext_resource type="Script" uid="uid://c6pu00b0kouqc" path="res://label_4.gd" id="5_hve3p"]
 [ext_resource type="Shape2D" uid="uid://phu34ls1cg5b" path="res://areashape.tres" id="6_j5wjh"]
+[ext_resource type="Shape2D" uid="uid://dx6rdlv00wlc4" path="res://new_rectangle_shape_2d.tres" id="10_mfdv2"]
 
 [node name="Game" type="Node2D" unique_id=2085864810]
 
@@ -15,9 +17,6 @@
 
 [node name="Score" type="Node" parent="." unique_id=2053514916]
 script = ExtResource("2_j5wjh")
-
-[node name="Node2D11" parent="." unique_id=1575765853 instance=ExtResource("3_vef74")]
-position = Vector2(171, -289)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1347045247]
 
@@ -55,6 +54,15 @@ offset_right = 45.0
 offset_bottom = 128.0
 theme_override_font_sizes/font_size = 40
 text = "0"
+
+[node name="Label4" type="Label" parent="CanvasLayer" unique_id=1317800217]
+offset_left = 389.0
+offset_top = -5.0
+offset_right = 808.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 40
+text = "Coins give you points!"
+script = ExtResource("5_hve3p")
 
 [node name="Node2D2" parent="." unique_id=924120522 instance=ExtResource("2_e2o6t")]
 position = Vector2(499, 384)
@@ -101,4 +109,33 @@ scale = Vector2(5.4799995, 0.48000002)
 position = Vector2(1475.9999, -380)
 scale = Vector2(0.4, 5.48)
 
+[node name="Node2D11" parent="." unique_id=377851053 instance=ExtResource("3_vef74")]
+position = Vector2(146, -894)
+
+[node name="Node2D12" parent="." unique_id=1575765853 instance=ExtResource("3_vef74")]
+position = Vector2(265, -894)
+
+[node name="Node2D13" parent="." unique_id=550678407 instance=ExtResource("3_vef74")]
+position = Vector2(384, -894)
+
+[node name="Node2D14" parent="." unique_id=954745946 instance=ExtResource("3_vef74")]
+position = Vector2(503, -894)
+
+[node name="Node2D15" parent="." unique_id=1607182860 instance=ExtResource("3_vef74")]
+position = Vector2(622, -894)
+
+[node name="Node2D16" parent="." unique_id=1682601075 instance=ExtResource("3_vef74")]
+position = Vector2(741, -894)
+
+[node name="Node2D17" parent="." unique_id=1439230066 instance=ExtResource("3_vef74")]
+position = Vector2(860, -894)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=447146277]
+position = Vector2(503, -765)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=560826093]
+position = Vector2(1.5, 1)
+shape = ExtResource("10_mfdv2")
+
 [connection signal="body_entered" from="Area2D" to="CanvasLayer/Label3" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="CanvasLayer/Label4" method="_on_area_2d_2_body_entered"]
