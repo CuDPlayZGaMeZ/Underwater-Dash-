@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://d1btb5s2sh6gt" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://b26nlvx5owifw" path="res://wall.tscn" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://cwj7tiwt7gmx4" path="res://label_2.gd" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://bh273whhlctnv" path="res://score.gd" id="2_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://8vswba8b6utm" path="res://coin.tscn" id="3_vef74"]
 [ext_resource type="Script" uid="uid://cxp8hjm6rxu4l" path="res://std.gd" id="4_ryrav"]
 [ext_resource type="Script" uid="uid://t7kiwppitnci" path="res://area_2d.gd" id="5_eow3j"]
 [ext_resource type="Shape2D" uid="uid://phu34ls1cg5b" path="res://areashape.tres" id="6_j5wjh"]
@@ -10,6 +12,12 @@
 [node name="Game" type="Node2D" unique_id=2085864810]
 
 [node name="Node2D" parent="." unique_id=529594684 instance=ExtResource("1_80nbo")]
+
+[node name="Score" type="Node" parent="." unique_id=2053514916]
+script = ExtResource("2_j5wjh")
+
+[node name="Node2D11" parent="." unique_id=1575765853 instance=ExtResource("3_vef74")]
+position = Vector2(171, -289)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1347045247]
 
@@ -40,6 +48,14 @@ theme_override_font_sizes/font_size = 40
 text = "Space to DASH"
 script = ExtResource("4_ryrav")
 
+[node name="Scorebel" type="Label" parent="CanvasLayer" unique_id=964540685]
+offset_left = 5.0
+offset_top = 73.0
+offset_right = 45.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
 [node name="Node2D2" parent="." unique_id=924120522 instance=ExtResource("2_e2o6t")]
 position = Vector2(499, 384)
 rotation = 1.5707964
@@ -61,6 +77,14 @@ scale = Vector2(5.4799986, 0.4000004)
 position = Vector2(1106, -12.000001)
 scale = Vector2(5.4799986, 0.4000004)
 
+[node name="Node2D7" parent="." unique_id=820838383 instance=ExtResource("2_e2o6t")]
+position = Vector2(-468, -386)
+scale = Vector2(0.4, 5.48)
+
+[node name="Node2D8" parent="." unique_id=1829456466 instance=ExtResource("2_e2o6t")]
+position = Vector2(-98.99997, -760)
+scale = Vector2(5.4799995, 0.48000002)
+
 [node name="Area2D" type="Area2D" parent="." unique_id=2045802310]
 position = Vector2(506, -57)
 script = ExtResource("5_eow3j")
@@ -68,5 +92,13 @@ script = ExtResource("5_eow3j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=310885510]
 position = Vector2(0, -3)
 shape = ExtResource("6_j5wjh")
+
+[node name="Node2D9" parent="." unique_id=540772895 instance=ExtResource("2_e2o6t")]
+position = Vector2(1123, -761)
+scale = Vector2(5.4799995, 0.48000002)
+
+[node name="Node2D10" parent="." unique_id=471257656 instance=ExtResource("2_e2o6t")]
+position = Vector2(1475.9999, -380)
+scale = Vector2(0.4, 5.48)
 
 [connection signal="body_entered" from="Area2D" to="CanvasLayer/Label3" method="_on_area_2d_body_entered"]

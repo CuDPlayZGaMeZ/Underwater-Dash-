@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8vswba8b6utm"]
+
+[ext_resource type="Script" uid="uid://t7kiwppitnci" path="res://area_2d.gd" id="1_v7riw"]
+[ext_resource type="Shape2D" uid="uid://dvg06sw86fxy" path="res://coinbox.tres" id="2_pdq0q"]
+[ext_resource type="Texture2D" uid="uid://scbacqbytrqm" path="res://icon.svg" id="3_w14il"]
+
+[node name="Node2D" type="Node2D" unique_id=1575765853]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1987009745]
+script = ExtResource("1_v7riw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1948205560]
+scale = Vector2(0.5, 0.5)
+shape = ExtResource("2_pdq0q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1359418975]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_w14il")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
