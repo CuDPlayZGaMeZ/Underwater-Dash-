@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://0sj8s7osd0m6"]
+
+[ext_resource type="Script" uid="uid://c72juiil5q6i5" path="res://nemy.gd" id="1_e6d4v"]
+[ext_resource type="Texture2D" uid="uid://bierrqoyfa3yc" path="res://costume1.svg" id="2_e6d4v"]
+[ext_resource type="Shape2D" uid="uid://dao344sax634" path="res://bomb.tres" id="2_qp131"]
+[ext_resource type="Shape2D" uid="uid://qlo3a8ydrxoj" path="res://enect.tres" id="3_qp131"]
+
+[node name="Node2D" type="Node2D" unique_id=1055757588]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=99382972]
+script = ExtResource("1_e6d4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2005998658]
+scale = Vector2(4.7, 4.7)
+shape = ExtResource("2_qp131")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1208994151]
+position = Vector2(5.9999995, -8)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_e6d4v")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=1999148322]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=1492743646]
+shape = ExtResource("3_qp131")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_exited"]
